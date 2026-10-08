@@ -1,0 +1,438 @@
+/* ============================================ */
+/* SOBRE */
+/* ============================================ */
+
+.sobre-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
+
+/* ============================================ */
+/* HERO */
+/* ============================================ */
+
+.sobre-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 380px;
+
+  margin-bottom: 4rem;
+  padding: 5rem 3rem;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+
+
+
+.sobre-hero-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  z-index: 0;
+}
+
+
+
+
+.sobre-hero::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(13, 27, 89, 0.78),
+    rgba(118, 75, 162, 0.72)
+  );
+
+  z-index: 1;
+}
+
+
+/* Conteúdo */
+
+.sobre-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 850px;
+
+  margin: 0 auto;
+}
+
+.sobre-hero h1 {
+  margin: 0 0 1rem;
+
+  color: #ffffff;
+
+  font-size: 3rem;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.sobre-hero p {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 1.2rem;
+
+  line-height: 1.6;
+
+  opacity: 0.95;
+
+  animation: fadeInUp 0.8s ease-out;
+}
+
+
+/* ============================================ */
+/* ANIMAÇÕES */
+/* ============================================ */
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ============================================ */
+/* ETIQUETA DAS SECÇÕES */
+/* ============================================ */
+
+.section-tag {
+  display: inline-block;
+
+  margin-bottom: 1rem;
+
+  padding: 0.3rem 1rem;
+
+  background: #e67e22;
+
+  color: #ffffff;
+
+  border-radius: 50px;
+
+  font-size: 0.8rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+
+/* ============================================ */
+/* CITAÇÃO */
+/* ============================================ */
+
+.quote {
+  margin-top: 2rem;
+
+  padding: 1.5rem;
+
+  background: #f8f9fa;
+
+  border-left: 4px solid #e67e22;
+
+  border-radius: 10px;
+
+  color: #555;
+
+  font-style: italic;
+}
+
+.quote p {
+  margin: 0 0 0.5rem;
+
+  color: #555;
+
+  font-size: 1rem;
+
+  line-height: 1.6;
+}
+
+.quote cite {
+  display: block;
+
+  margin-top: 0.5rem;
+
+  color: #e67e22;
+
+  font-style: normal;
+
+  font-weight: bold;
+}
+
+
+/* ============================================ */
+/* SECÇÕES DE CONTEÚDO */
+/* ============================================ */
+
+.sobre-section {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 4rem;
+
+  align-items: center;
+
+  margin-bottom: 6rem;
+}
+
+
+/* Secção invertida */
+
+.sobre-section.reverse {
+  direction: rtl;
+}
+
+.sobre-section.reverse .sobre-text {
+  direction: ltr;
+}
+
+
+/* ============================================ */
+/* TEXTO */
+/* ============================================ */
+
+.sobre-text {
+  direction: ltr;
+}
+
+.sobre-text h1,
+.sobre-text h2 {
+  position: relative;
+
+  margin: 0 0 1.5rem;
+
+  color: #e67e22;
+
+  font-size: 2.5rem;
+
+  line-height: 1.2;
+}
+
+.sobre-text h1::after,
+.sobre-text h2::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -10px;
+
+  width: 60px;
+  height: 3px;
+
+  background: #e67e22;
+}
+
+.sobre-text p {
+  margin: 0 0 1rem;
+
+  color: #555;
+
+  font-size: 1.1rem;
+
+  line-height: 1.8;
+
+  text-align: justify;
+}
+
+
+/* ============================================ */
+/* IMAGENS DAS SECÇÕES */
+/* ============================================ */
+
+.sobre-image {
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+  transition: transform 0.3s ease;
+}
+
+.sobre-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sobre-image-wrapper .quote {
+  margin-top: 0;
+}
+.sobre-image:hover {
+  transform: translateY(-3px);
+}
+
+.sobre-image img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  transition: transform 0.4s ease;
+}
+
+.sobre-image:hover img {
+  transform: scale(1.03);
+}
+
+
+/* ============================================ */
+/* TABLET */
+/* ============================================ */
+
+@media (max-width: 968px) {
+  .sobre-container {
+    padding: 3rem 1.5rem;
+  }
+
+  .sobre-hero {
+    min-height: 320px;
+
+    padding: 4rem 2rem;
+  }
+
+  .sobre-hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .sobre-hero p {
+    font-size: 1.05rem;
+  }
+
+  .sobre-section {
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+
+    margin-bottom: 4rem;
+  }
+
+  .sobre-section.reverse {
+    direction: ltr;
+  }
+
+  .sobre-text h1,
+  .sobre-text h2 {
+    font-size: 2rem;
+  }
+
+  .sobre-text p {
+    font-size: 1rem;
+  }
+}
+
+
+/* ============================================ */
+/* TELEMÓVEL */
+/* ============================================ */
+
+@media (max-width: 768px) {
+  .sobre-container {
+    padding: 2rem 1rem;
+  }
+
+  .sobre-hero {
+    min-height: 280px;
+
+    padding: 3rem 1.5rem;
+
+    border-radius: 16px;
+  }
+
+  .sobre-hero h1 {
+    font-size: 2rem;
+  }
+
+  .sobre-hero p {
+    font-size: 1rem;
+  }
+
+  .quote {
+    padding: 1.2rem;
+  }
+}
+
+
+/* ============================================ */
+/* TELEMÓVEL PEQUENO */
+/* ============================================ */
+
+@media (max-width: 480px) {
+  .sobre-hero {
+    min-height: 250px;
+
+    padding: 2.5rem 1rem;
+  }
+
+  .sobre-hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .sobre-hero p {
+    font-size: 0.95rem;
+  }
+
+  .sobre-text h1,
+  .sobre-text h2 {
+    font-size: 1.7rem;
+  }
+
+  .sobre-text p {
+    font-size: 0.95rem;
+
+    text-align: left;
+  }
+}
