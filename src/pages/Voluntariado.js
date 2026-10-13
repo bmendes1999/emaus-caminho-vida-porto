@@ -54,6 +54,7 @@ const Voluntariado = () => {
     <section className="sobre-hero">
         <img
           src="/imagens/voluntarios.jpg"
+          alt="voluntarios"
           
           className="sobre-hero-image"
         />
