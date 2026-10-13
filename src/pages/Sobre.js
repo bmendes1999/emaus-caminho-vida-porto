@@ -86,6 +86,7 @@ function Sobre() {
           <div className="sobre-image">
             <img
               src="/imagens/fundador.jpg"
+              alt="fundador"
              
             />
           </div>
@@ -196,6 +197,7 @@ function Sobre() {
 
           <img
             src="/imagens/carrinha.jpg"
+            alt="carrinha"
             
           />
 

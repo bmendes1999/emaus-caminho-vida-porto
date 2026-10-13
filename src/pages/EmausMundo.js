@@ -9,6 +9,7 @@ const EmausMundo = () => {
         <img
           src="/imagens/mapa.jpg"
           className="emausmundo-hero-image"
+          alt="mapa"
         />
 
         <div className="emausmundo-hero-content">
