@@ -15,7 +15,7 @@ function Home() {
   const [loading, setLoading] = useState(true);
 
 useEffect(() => {
-  fetch("http://localhost:5000/api/noticias")
+  fetch(`${process.env.REACT_APP_API_URL}/api/noticias`)
     .then((response) => response.json())
     .then((data) => {
       setNoticias(data);
