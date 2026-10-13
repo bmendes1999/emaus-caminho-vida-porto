@@ -21,8 +21,9 @@ const Noticias = () => {
     /* ======================================== */
 
     if (url) {
-      fetch(
-        `http://localhost:5000/api/noticia?url=${encodeURIComponent(url)}`
+  fetch(
+    `${process.env.REACT_APP_API_URL}/api/noticia?url=${encodeURIComponent(url)}`
+  
       )
         .then((response) => {
           if (!response.ok) {
@@ -48,7 +49,7 @@ const Noticias = () => {
     /* LISTA DE NOTÍCIAS */
     /* ======================================== */
 
-    fetch("http://localhost:5000/api/noticias")
+    fetch(`${process.env.REACT_APP_API_URL}/api/noticias`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Erro ao obter as notícias.");
